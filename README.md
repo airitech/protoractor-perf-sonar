@@ -98,4 +98,4 @@ perfSonar.end().then(function(measureTime) {
 s-nakagawa
 
 # License
-Apache Version 2.0
+[Apache Version 2.0](https://github.com/serive/es-ml-alert/blob/master/LICENSE)
