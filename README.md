@@ -98,4 +98,4 @@ perfSonar.end().then(function(measureTime) {
 s-nakagawa
 
 # License
-MIT
+Apache Version 2.0
