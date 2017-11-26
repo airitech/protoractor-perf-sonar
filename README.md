@@ -63,13 +63,13 @@ promise.then(function(measureTime) {
 const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
-// 表示を待つ要素を指定する。
+// 計測開始操作と、計測終了条件を指定する(対象要素が表示になるまで)。
 perfSonar.measureUntilShow('#gobutoon', 'click', '.show-target');
 
 // テスト実行
 element(by.id('gobutton')).click();
 
-// 性能計測完了
+// .show-target要素が表示されるまでの時間を取得
 perfSonar.end().then(function(measureTime) {
   console.log('性能計測結果:' + measureTime);
 });
@@ -77,18 +77,17 @@ perfSonar.end().then(function(measureTime) {
 
 ### 指定操作から特定要素非表示まで計測
 
-
 ```js
 const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
-// 非表示を待つ要素を指定する。
+// 計測開始操作と、計測終了条件を指定する(対象要素が非表示になるまで)。
 perfSonar.measureUntilHide('#gobutoon', 'click', '.hide-target');
 
 // テスト実行
 element(by.id('gobutton')).click();
 
-// 性能計測完了
+// .hide-target要素が非表示になるまでの測定を実施
 perfSonar.end().then(function(measureTime) {
   console.log('性能計測結果:' + measureTime);
 });
