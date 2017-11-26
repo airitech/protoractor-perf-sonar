@@ -15,14 +15,14 @@ SPAにおいて、指定操作から特定要素の表示までの処理時間�
 |No  |ライブラリ名  |概要  |
 |---|---|---|
 |1|Protoractor|本プログラムはProtoractor上で動作します。<br>ProtoractorのVersionはどれでも動作可能です。|
-|2|jQeury|jQueryが必要です。<br>jQuery liteでは動作しません。|
+|2|jQeury|jQueryが必要です。<br>jQuery liteでは動作しません。<br>※将来jQueryを外して動作可能にはしたいと思っています。|
 
 # Usage
 
 ## install
 
 ```js
-npm install protoractor-perf-sonar --save-dev
+npm install s-nakagawa/protoractor-perf-sonar --save-dev
 ```
 
 ## method usage
