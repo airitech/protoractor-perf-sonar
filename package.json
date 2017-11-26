@@ -1,0 +1,17 @@
+{
+  "name": "protoractor-perf-sonar",
+  "version": "1.0.0",
+  "description": "mesurement performance for e2e test with protoractor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "protoractor",
+    "performance"
+  ],
+  "author": "s-nakagawa",
+  "license": "MIT"
+}
