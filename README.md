@@ -27,15 +27,15 @@ npm install s-nakagawa/protoractor-perf-sonar --save-dev
 
 ## method usage
 
-### 指定操作から特定要素表示まで計測
+### 特定要素表示まで計測
 ```js
-perfSonar.measureUntilShow(operateTagSelector, eventType, showTagSelector);
+perfSonar.untilShow(showTagSelector);
 ```
 
-### 指定操作から特定要素非表示まで計測
+### 特定要素非表示まで計測
 
 ```js
-perfSonar.measureUntilHide(operateTagSelector, eventType, hideTagSelector);
+perfSonar.untilHide(hideTagSelector);
 ```
 
 ### 計測値の取得
@@ -51,10 +51,8 @@ promise.then(function(measureTime) {
 
 |No  |変数名  |概要  |
 |---|---|---|
-|1|operateTagSelector|計測開始する操作対象の要素をcssセレクタ形式で指定します。|
-|2|eventType|計測開始する操作を示すevent名を指定します。<br> ex: click, mousedown, mouseupなど|
-|3|showTagSelector/|計測完了とする表示対象をcssセレクタを用いて指定します。<br>指定セレクタで一つでも要素が見つかれば計測終了となります。<br>一度も要素が非表示とならない場合は計測できません。|
-|4|hideTagSelector|計測完了とする非表示対象をcssセレクタを用いて指定します。<br>指定セレクタが一つも見つからなくなった時点で計測終了となります。<br>一度も要素が表示とならない場合は計測できません。|
+|1|showTagSelector/|計測完了とする表示対象をcssセレクタを用いて指定します。<br>指定セレクタで一つでも要素が見つかれば計測終了となります。<br>一度も要素が非表示とならない場合は計測できません。|
+|2|hideTagSelector|計測完了とする非表示対象をcssセレクタを用いて指定します。<br>指定セレクタが一つも見つからなくなった時点で計測終了となります。<br>一度も要素が表示とならない場合は計測できません。|
 
 ## example
 ### 指定操作から特定要素表示まで計測
@@ -64,7 +62,7 @@ const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
 // 計測開始操作と、計測終了条件を指定する(対象要素が表示になるまで)。
-perfSonar.measureUntilShow('#gobutoon', 'click', '.show-target');
+perfSonar.untilShow('.show-target');
 
 // テスト実行
 element(by.id('gobutton')).click();
@@ -82,7 +80,7 @@ const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
 // 計測開始操作と、計測終了条件を指定する(対象要素が非表示になるまで)。
-perfSonar.measureUntilHide('#gobutoon', 'click', '.hide-target');
+perfSonar.untilHide('.hide-target');
 
 // テスト実行
 element(by.id('gobutton')).click();
