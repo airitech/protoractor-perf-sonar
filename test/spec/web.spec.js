@@ -13,6 +13,8 @@ describe('angularjs homepage test', function() {
 
     element(by.css('.nav-index-group .nav-index-listing:nth-child(2) a')).click();
 
+    browser.sleep(1000);
+
     // You wrote your first test, cross it off the list
     perfSonar.end().then(function(measureTime) {
       console.log('性能計測結果:' + measureTime);
@@ -31,6 +33,7 @@ describe('angularjs homepage test', function() {
 
     element(by.css('.nav-index-group .nav-index-listing:nth-child(2) a')).click();
 
+    browser.sleep(1000);
     // You wrote your first test, cross it off the list
     perfSonar.end().then(function(measureTime) {
       console.log('性能計測結果:' + measureTime);
@@ -50,6 +53,7 @@ describe('angularjs homepage test', function() {
 
     element(by.css('.nav-index-group .nav-index-listing:nth-child(1) a')).click();
 
+    browser.sleep(1000);
     // You wrote your first test, cross it off the list
     perfSonar.end().then(function(measureTime) {
       console.log('性能計測結果:' + measureTime);
@@ -68,6 +72,7 @@ describe('angularjs homepage test', function() {
 
     element(by.css('.nav-index-group .nav-index-listing:nth-child(1) a')).click();
 
+    browser.sleep(1000);
     // You wrote your first test, cross it off the list
     perfSonar.end().then(function(measureTime) {
       console.log('性能計測結果:' + measureTime);
