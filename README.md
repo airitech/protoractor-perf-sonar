@@ -54,13 +54,13 @@ promise.then(function(measureTime) {
 |2|hideTagSelector|計測完了とする非表示対象をcssセレクタを用いて指定します。<br>指定セレクタが一つも見つからなくなった時点で計測終了となります。<br>一度も要素が表示とならない場合は計測できません。<br>ng-ifによって、表示している要素が隠れるまで計測したい場合は、子要素を指定することが可能です。<br>ng-showやng-hideで表示を切り替える場合は、ng-showやng-hideが記載されているタグを指定しないと計測できません。|
 
 ## example
-### 指定操作から特定要素表示まで計測
+### 特定要素表示まで計測
 
 ```js
 const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
-// 計測開始操作と、計測終了条件を指定する(対象要素が表示になるまで)。
+// 計測終了条件を指定する(対象要素が表示になるまで)。
 perfSonar.untilShow('.show-target');
 
 // テスト実行
@@ -78,7 +78,7 @@ perfSonar.end().then(function(measureTime) {
 const PerfSonar = require('protoractor-perf-sonar');
 var perfSonar = new PerfSonar.sonar(browser);
 
-// 計測開始操作と、計測終了条件を指定する(対象要素が非表示になるまで)。
+// 計測終了条件を指定する(対象要素が非表示になるまで)。
 perfSonar.untilHide('.hide-target');
 
 // テスト実行
