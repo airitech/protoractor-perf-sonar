@@ -21,7 +21,7 @@ SPAにおいて、指定操作から特定要素の表示までの処理時間�
 ## install
 
 ```js
-npm install s-nakagawa/protoractor-perf-sonar --save-dev
+npm install protoractor-perf-sonar --save-dev
 ```
 
 ## method usage
