@@ -1,6 +1,6 @@
 {
   "name": "protoractor-perf-sonar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "mesurement performance for e2e test with protoractor",
   "main": "index.js",
   "scripts": {
